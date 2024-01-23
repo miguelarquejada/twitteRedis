@@ -1,0 +1,41 @@
+﻿@page "{display:int?}"
+@model IndexModel
+
+@{
+    var display = ViewData["Display"]?.ToString();
+}
+
+<main class="col-12 col-lg-6">
+    <div id="header" class="mt-5 d-flex flex-column align-items-center justify-content-center">
+        <div id="logo" class="mb-3">
+            <img src="/img/redis.svg"/>
+            <span>TwitteRedis</span>
+        </div>
+        <form method="post" id="input-area" class="d-flex flex-column">
+            <textarea asp-for="Tweet!.Description" placeholder="Escreva um novo tweet..."></textarea>
+            <button type="submit" class="align-self-end mt-2">Enviar</button>
+        </form>
+    </div>
+
+    <div id="botoes-area" class="d-flex mt-4 mb-5">
+        <a asp-route-display="0" id="recentes" class="me-1 @(display == "0" ? "botao-ativo" : "")">Recentes</a>
+        <a asp-route-display="1" id="todos" class="@(display == "1" ? "botao-ativo" : "")">Todos</a>
+    </div>
+
+    <div id="content">
+        @if (Model.Tweets != null)
+        {
+            foreach (var tweet in Model.Tweets)
+            {
+                <div class="tweet d-flex align-items-center mt-4">
+                    <img src="/img/mike.jpg" class="me-3" />
+                    <div class="d-flex flex-column">
+                        <span class="tweet-user">@@mikebaguncinha</span>
+                        <span class="tweet-content">@tweet.Description</span>
+                        <span class="tweet-date">@tweet.CreatedOnDate</span>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</main>

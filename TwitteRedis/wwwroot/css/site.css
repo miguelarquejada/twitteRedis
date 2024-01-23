@@ -1,0 +1,102 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: #393939;
+}
+
+#logo > img {
+    width: 42px;
+    margin-right: 8px;
+}
+
+#logo > span {
+    font-weight: bold;
+    color: #393939;
+    font-size: 24px;
+}
+
+#input-area {
+    width: 100%;
+}
+
+#input-area > button {
+    border: none;
+    outline: none;
+    background: #c6302b;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+#input-area > textarea {
+    border: none;
+    background: #F5F5F5;
+    padding: 30px;
+    border-radius: 18px;
+    outline: none;
+    resize: none;
+}
+
+#input-area > button:hover {
+    background: #6b1d1e;
+}
+
+#botoes-area a {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 12px;
+    color: #393939;
+    background: none;
+}
+
+.botao-ativo {
+    color: white !important;
+    background: #393939 !important;
+}
+
+.tweet > img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.tweet-user {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tweet-content {
+}
+
+.tweet-date {
+    color: #AAAAAA;
+    font-size: 12px;
+}
